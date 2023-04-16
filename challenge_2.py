@@ -30,7 +30,7 @@ from playsound import playsound
 # Target 1
 # Load a song, and then have Python play the song back to you.
 
-file = 'Alright.wav'
+file = 'curls.wav'
 
 
 # opens the .wav file
