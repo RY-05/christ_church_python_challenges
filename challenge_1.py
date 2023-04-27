@@ -1,52 +1,73 @@
 # Can computers be used to create art?
 
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+k = 5
+a = np.linspace(k, k, 10 ** 6)
+phi = np.linspace(0, 12 * np.pi, 10 ** 6)
+t = np.linspace(0, 24 * np.pi, 10 ** 4)
+
+
 # Targets:
+
 # Plot a circle, using the parametric equation above.
+x = k * np.cos(t)
+y = k * np.sin(t)
+plt.plot(x, y)
+plt.show()
 
 # Find the parametric equation for Fermat’s Spiral (online), and therefore plot the spiral.
+x = k * np.sqrt(t) * np.cos(t)
+y = k * np.sqrt(t) * np.sin(t)
+u = -k * np.sqrt(t) * np.cos(t)
+v = -k * np.sqrt(t) * np.sin(t)
+plt.plot(x, y)
+plt.plot(u, v)
+plt.show()
 
 # Do the same for the Butterﬂy Curve.
+x = np.sin(t) * ((np.e ** np.cos(t)) - (2 * np.cos(4 * t)) - (np.sin(t / 12) ** 5))
+y = np.cos(t) * ((np.e ** np.cos(t)) - (2 * np.cos(4 * t)) - (np.sin(t / 12) ** 5))
+plt.plot(x, y)
+plt.show()
 
 
 # Extensions:
+
 # Specify and plot 5 circles with diﬀerent sizes and diﬀerent colours.
+ran = r.randint(1, 100)
+x1 = ran * np.cos(t)
+y1 = ran * np.sin(t)
+
+ran = r.randint(1, 100)
+x2 = ran * np.cos(t)
+y2 = ran * np.sin(t)
+
+ran = r.randint(1, 100)
+x3 = ran * np.cos(t)
+y3 = ran * np.sin(t)
+
+ran = r.randint(1, 100)
+x4 = ran * np.cos(t)
+y4 = ran * np.sin(t)
+
+ran = r.randint(1, 100)
+x5 = ran * np.cos(t)
+y5 = ran * np.sin(t)
+
+plt.plot(x1, y1)
+plt.plot(x2, y2)
+plt.plot(x3, y3)
+plt.plot(x4, y4)
+plt.plot(x5, y5)
+plt.show()
+
 
 # For the Butterﬂy Curve, change the script so that the colour of each line segment changes with the x-coordinate.
+'''
+https://matplotlib.org/stable/tutorials/colors/colors.html#sphx-glr-tutorials-colors-colors-py
+'''
 
 # For Fermat’s spiral, plot the curve so that the colour gets lighter with the radius of each line segment.
-
-
-'''
-import matplotlib.pyplot as plt
-import numpy as np
-import math as m
-
-r = np.arange(0, 8, 0.00001)
-#playing around with the step value I realised that decreasing the value resulted in more curved lines
-#x = (-1 * r)
-#arrange function displays circumference with an r value that varies
-theta = (2 * np.pi * (-1 * r))  #
-theta_2 = theta + 180
-#plots the line as a curving spiral, formulae of circumference of circle
-
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-fig.set_edgecolor("orange")
-ax.plot(theta, r)
-ax.plot(theta_2, r)
-#ax.plot(theta, x)
-#plots circle in radian form, where ax is a function of numpy library and plots the graph
-ax.set_rmax(8)
-#max value that r can take
-array = []
-for i in range(0, 8, 1):
-  array.append(i)
-ax.set_rticks(array)
-# Less radial ticks
-ax.set_rlabel_position(-22.5)
-# Move radial labels away from plotted line
-ax.grid(True)
-#removes inside grid
-
-ax.set_title("A line plot on a polar axis", va='bottom')
-plt.show()
-'''
