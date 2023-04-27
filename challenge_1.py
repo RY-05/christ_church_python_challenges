@@ -2,6 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import random as r
 
 
 k = 5
@@ -36,34 +37,33 @@ plt.show()
 
 # Extensions:
 
-# Specify and plot 5 circles with diﬀerent sizes and diﬀerent colours.
+# Specify and plot 5 circles with different sizes and different colours.
 ran = r.randint(1, 100)
 x1 = ran * np.cos(t)
 y1 = ran * np.sin(t)
+plt.plot(x1, y1)
 
 ran = r.randint(1, 100)
 x2 = ran * np.cos(t)
 y2 = ran * np.sin(t)
+plt.plot(x2, y2)
 
 ran = r.randint(1, 100)
 x3 = ran * np.cos(t)
 y3 = ran * np.sin(t)
+plt.plot(x3, y3)
 
 ran = r.randint(1, 100)
 x4 = ran * np.cos(t)
 y4 = ran * np.sin(t)
+plt.plot(x4, y4)
 
 ran = r.randint(1, 100)
 x5 = ran * np.cos(t)
 y5 = ran * np.sin(t)
-
-plt.plot(x1, y1)
-plt.plot(x2, y2)
-plt.plot(x3, y3)
-plt.plot(x4, y4)
 plt.plot(x5, y5)
-plt.show()
 
+plt.show()
 
 # For the Butterﬂy Curve, change the script so that the colour of each line segment changes with the x-coordinate.
 '''
